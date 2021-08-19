@@ -28,11 +28,12 @@ public class PaymentSection extends JPanel implements ActionListener{
         this.setLayout(null);
         this.setBorder(new LineBorder(Color.BLACK));
         this.setBounds(210,190,290,400);
-//        this.setBackground(Color.CYAN);
+        this.setBackground(Color.PINK);
         
         // set label bounds
-        this.label.setBounds(80,0,200,30);
-        this.label.setForeground(Color.gray);
+        this.label.setBounds(80,0,150,30);
+        this.label.setForeground(Color.blue);
+        this.label.setBorder(new LineBorder(Color.cyan));
         
         //set the payment text field
         this.paymentText.setBounds(5,60,280,60);
