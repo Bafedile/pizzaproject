@@ -77,7 +77,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
         
         // set the border 
         this.setBorder(new LineBorder(Color.BLACK));
-
+        this.setBackground(Color.cyan);
         // set the bounds of the panel 
         this.setBounds(0,250,500,400);
 //        this.setBackground(Color.magenta);
@@ -211,7 +211,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
     double totalAmountDue, totalPizzasAmount,totalDrinksAmount;
     String message;
     ItemTrackPanel it = new ItemTrackPanel();
-    
+    int num = ItemTrackPanel.customerOrder++;
     
     
     PizzaShopItemsProcessor ip = new PizzaShopItemsProcessor();
@@ -281,6 +281,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
                 ip.populateTheDrinksIntoList(drink, drinks);
                 ip.populateTheDrinksIntoList(drink,drinksSummary);
             }else {
+                
             }
             
             
@@ -316,6 +317,8 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
         }
         
         if(nextButton == source){
+            num = ItemTrackPanel.customerOrder++;
+            ItemTrackPanel.customerNo.setText("Customer Order/No "+num);
             PaymentSection.paymentText.setText("");
             PaymentSection.changeText.setText("");
             PaymentSection.payment.setText("");
