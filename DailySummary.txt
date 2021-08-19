@@ -76,3 +76,30 @@ TotalAmount: R0.00
 ---------------------------------
 Total Drinks Amount Made: R0.00
 
+Pizza daily summary
+Chicken And Mashroom
+Quantity: 0
+TotalAmount: R0.00
+------------------------------
+Chicken And Mayo
+Quantity: 0
+TotalAmount: R0.00
+-------------------------------
+Beef And Cheese
+Quantity: 0
+TotalAmount: R0.00
+------------------------------
+Total Pizzas Daily Amount: R0.00
+
+
+Drinks Daily Summary
+ColdDrink
+Quantity: 0
+TotalAmount : R0.00
+---------------------------------
+Juice Drink
+Quantity: 0
+TotalAmount: R0.00
+---------------------------------
+Total Drinks Amount Made: R0.00
+

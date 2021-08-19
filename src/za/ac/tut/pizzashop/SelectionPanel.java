@@ -337,21 +337,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
             totalAmountDue += baconExtrasAmount;
             ItemTrackPanel.text.append(String.format("Bacon Extras : %.2f%n",baconExtrasAmount));
          }
-             
-             
-//        if(source == extraBox1){
-////            double cheeseExtraAmount = 23.34;
-//            totalAmountDue += cheeseExtrasAmount;
-//            
-//        }
-//        
-//        if(source == extraBox2){
-////            double baconExtraAmount = 23.34;
-//            totalAmountDue += baconExtrasAmount;
-//            
-//        }
-        
-        
+
         if(PaymentSection.paymentButton == source){
             String value = PaymentSection.payment.getText();
             // convert the text in payment text to double
