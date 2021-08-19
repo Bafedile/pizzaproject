@@ -34,6 +34,7 @@ public class DisplayPanel extends JPanel {
     
     public DisplayPanel(){
         this.setLayout(null);
+        this.setBackground(Color.gray);
         this.setBorder(new LineBorder(Color.BLACK));
         this.setBounds(0,0,850,250);
         this.label.setBounds(325,0,200,30);
