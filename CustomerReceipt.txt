@@ -1,0 +1,129 @@
+Pizza Shop 
+Pizza flavour: chicken and mashroom
+Pizza Quantity: 2                  
+Pizza Price: R68.50               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 2                  
+Total drink items : 0                  
+Total pizzas amount due: 137.00             
+Total drinks amount due: 0.00               
+Total amount due R137.00
+Amount paid R 200.00
+Change R 63.00
+
+
+Pizza Shop 
+Pizza flavour: chicken and mayo   
+Pizza Quantity: 3                  
+Pizza Price: R58.50               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 3                  
+Total drink items : 0                  
+Total pizzas amount due: 175.50             
+Total drinks amount due: 0.00               
+Total amount due R175.50
+Amount paid R 200.00
+Change R 24.50
+
+
+Pizza Shop 
+Pizza flavour: beef and cheese    
+Pizza Quantity: 2                  
+Pizza Price: R72.50               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 2                  
+Total drink items : 0                  
+Total pizzas amount due: 320.50             
+Total drinks amount due: 0.00               
+Total amount due R320.50
+Amount paid R 340.00
+Change R 19.50
+
+
+Pizza Shop 
+Pizza flavour: beef and cheese    
+Pizza Quantity: 2                  
+Pizza Price: R72.50               each 
+Drink type:  colddrink          
+Drinks Quanity: 1                  
+Drinks Price: R21.99               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 2                  
+Total drink items : 1                  
+Total pizzas amount due: 145.00             
+Total drinks amount due: 21.99              
+Total amount due R166.99
+Amount paid R 200.00
+Change R 33.01
+
+
+Pizza Shop 
+Pizza flavour: beef and cheese    
+Pizza Quantity: 1                  
+Pizza Price: R72.50               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 1                  
+Total drink items : 0                  
+Total pizzas amount due: 217.50             
+Total drinks amount due: 21.99              
+Total amount due R239.49
+Amount paid R 300.00
+Change R 60.51
+
+
+Pizza Shop 
+Pizza flavour: beef and cheese    
+Pizza Quantity: 2                  
+Pizza Price: R72.50               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 2                  
+Total drink items : 0                  
+Total pizzas amount due: 145.00             
+Total drinks amount due: 0.00               
+Total amount due R145.00
+Amount paid R 300.00
+Change R 155.00
+
+
+Pizza Shop 
+Pizza flavour: chicken and mayo   
+Pizza Quantity: 1                  
+Pizza Price: R58.50               each 
+Pizza flavour: chicken and mashroom
+Pizza Quantity: 2                  
+Pizza Price: R68.50               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 3                  
+Total drink items : 0                  
+Total pizzas amount due: 195.50             
+Total drinks amount due: 0.00               
+Total amount due R195.50
+Amount paid R 200.00
+Change R 4.50
+
+
+Pizza Shop 
+Pizza flavour: chicken and mayo   
+Pizza Quantity: 3                  
+Pizza Price: R72.50               each 
+Drink type:  colddrink          
+Drinks Quanity: 3                  
+Drinks Price: R23.43               each 
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+Total pizza items : 3                  
+Total drink items : 3                  
+Total pizzas amount due: 217.50             
+Total drinks amount due: 70.29              
+Total amount due R287.79
+Amount paid R 300.00
+Change R 12.21
+
+

@@ -3,19 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pizzaproject;
+package za.ac.tut.pizzashop.items.extrasinterface;
 
 /**
  *
  * @author benov
  */
-public class PizzaProject {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public interface ExtrasInterface {
+    public double cheeseExtrasAmount = 23.4;
+    public double baconExtrasAmount = 25.3;
 }

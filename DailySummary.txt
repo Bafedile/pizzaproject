@@ -1,0 +1,78 @@
+Total Pizzas Purchased 5                  
+Total Drinks Purchased : 0                  
+Total Pizzas Amount Made: R641.00             
+Total Drinks Amount Made: R0.00               
+Total Amount Made: R641.00             
+
+Total Pizzas Purchased 3                  
+Total Drinks Purchased : 1                  
+Total Pizzas Amount Made: R435.00             
+Total Drinks Amount Made: R43.98              
+Total Amount Made: R478.98             
+
+Total Pizzas Purchased 5                  
+Total Drinks Purchased : 0                  
+Total Pizzas Amount Made: R340.50             
+Total Drinks Amount Made: R0.00               
+Total Amount Made: R340.50             
+
+Total Pizzas Purchased 3                  
+Total Drinks Purchased : 3                  
+Total Pizzas Amount Made: R217.50             
+Total Drinks Amount Made: R70.29              
+Total Amount Made: R287.79             
+
+Pizza daily summary
+Chicken And Mashroom
+Quantity: 0
+TotalAmount: R0.00
+------------------------------
+Chicken And Mayo
+Quantity: 0
+TotalAmount: R0.00
+-------------------------------
+Beef And Cheese
+Quantity: 0
+TotalAmount: R0.00
+------------------------------
+Total Pizzas Daily Amount: R0.00
+
+
+Drinks Daily Summary
+ColdDrink
+Quantity: 0
+TotalAmount : R0.00
+---------------------------------
+Juice Drink
+Quantity: 0
+TotalAmount: R0.00
+---------------------------------
+Total Drinks Amount Made: R0.00
+
+Pizza daily summary
+Chicken And Mashroom
+Quantity: 0
+TotalAmount: R0.00
+------------------------------
+Chicken And Mayo
+Quantity: 2
+TotalAmount: R112.00
+-------------------------------
+Beef And Cheese
+Quantity: 0
+TotalAmount: R0.00
+------------------------------
+Total Pizzas Daily Amount: R112.00
+
+
+Drinks Daily Summary
+ColdDrink
+Quantity: 0
+TotalAmount : R0.00
+---------------------------------
+Juice Drink
+Quantity: 0
+TotalAmount: R0.00
+---------------------------------
+Total Drinks Amount Made: R0.00
+
