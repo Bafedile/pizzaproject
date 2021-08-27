@@ -19,6 +19,7 @@ public class ColdDrink extends Drinks {
     
     public ColdDrink(String unitFlavour,String unitSize,int unitQuantity){
         super(unitFlavour,unitSize,unitQuantity);
+        
     }
     
     @Override
@@ -31,7 +32,7 @@ public class ColdDrink extends Drinks {
             price = 11.59;
             
         }else if(unitSize.equalsIgnoreCase("medium")){
-            setUnitSize("1l");
+            setUnitSize("1.5l");
             price = 17.29;
             
         }else{
@@ -41,17 +42,14 @@ public class ColdDrink extends Drinks {
         return price;
     }
 
-    @Override
-    public double determineTotalAmount() {
-        return determineItemPrice(getUnitSize()) * getUnitQuantity();
-    }
     
     @Override
     public String toString(){
         return String.format("Drink flavour: %s%n"
                 + "Drink size: %s%n"
-                + "Drink prize: R%.2f%n"
+                + "Drink price: R%.2f%n"
+                + "Drinks Total price: R%.2f%n"
                 + "Drink quantity: %d%n"
-                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineTotalAmount(),getUnitQuantity());
+                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineItemPrice(getUnitSize()),determineTotalAmount(),getUnitQuantity());
     }
 }
