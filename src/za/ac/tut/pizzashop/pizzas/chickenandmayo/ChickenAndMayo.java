@@ -13,7 +13,7 @@ import za.ac.tut.pizzashop.itemsinterface.ItemsInterface;
  * @author benov
  */
 public class ChickenAndMayo extends Pizzas {
-
+    
     public ChickenAndMayo(){
         super();
     }
@@ -37,18 +37,20 @@ public class ChickenAndMayo extends Pizzas {
          return price;
     }
 
-    @Override
-    public double determineTotalAmount() {
-        return determineItemPrice(getUnitSize()) * getUnitQuantity();
-    }
+//    @Override
+//    public double determineTotalAmount() {
+//        if(getUnitSize().equalsIgnoreCase("large") && getUnitQuantity()>=2){
+//            return determineItemPrice(getUnitSize()*getUnitQuantity()*(discount));
+//        }else{
+//            return determineItemPrice(getUnitSize()) * getUnitQuantity();
+//        }
+//        
+//    }
     
-    @Override
+    @Override 
     public String toString(){
-        return String.format("Pizza flavour: %s%n"
-                + "Pizza size: %s%n"
-                + "Pizza prize: R%.2f%n"
-                + "Pizza quantity: %d%n"
-                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineTotalAmount(),getUnitQuantity());
+        return super.toString();
     }
+//   
     
 }

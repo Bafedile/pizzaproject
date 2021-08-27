@@ -36,19 +36,9 @@ public class ChickenAndMashroom extends Pizzas {
          return price;
     }
 
-    @Override
-    public double determineTotalAmount() {
-        return determineItemPrice(getUnitSize()) * getUnitQuantity();
-
-    }
-    
-    @Override
+    @Override 
     public String toString(){
-        return String.format("Pizza flavour: %s%n"
-                + "Pizza size: %s%n"
-                + "Pizza prize: R%.2f%n"
-                + "Pizza quantity: %d%n"
-                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineTotalAmount(),getUnitQuantity());
+        return super.toString();
     }
         
 }

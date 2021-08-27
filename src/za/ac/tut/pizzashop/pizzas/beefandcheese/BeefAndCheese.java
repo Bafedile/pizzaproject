@@ -36,18 +36,11 @@ public class BeefAndCheese extends Pizzas {
         return price;
     }
 
-    @Override
-    public double determineTotalAmount() {
-        return determineItemPrice(getUnitSize())*getUnitQuantity();
+
+    @Override 
+    public String toString(){
+        return super.toString();
     }
     
-    @Override
-    public String toString(){
-        return String.format("Pizza flavour: %s%n"
-                + "Pizza size: %s%n"
-                + "Pizza prize: R%.2f%n"
-                + "Pizza quantity: %d%n"
-                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineTotalAmount(),getUnitQuantity());
-    }
     
 }
