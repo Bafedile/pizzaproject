@@ -21,14 +21,14 @@ public class MenuDisplayFrame extends JFrame implements ActionListener {
     SelectionPanel sp = new SelectionPanel();
     ItemTrackPanel tp = new ItemTrackPanel();
     
-    List<Pizzas> pizzas = sp.pizzas;
-    List<Drinks> drinks = sp.drinks;
+    List<Pizzas> pizzas = SelectionPanel.pizzasSummary;
+    List<Drinks> drinks = SelectionPanel.drinksSummary;
     
     public MenuDisplayFrame(){
         this.setLayout(null);
         this.setTitle("@Superio Code Pizza");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(900,700);
+        this.setSize(860,685);
         
         // Add the selection panel 
         this.add(sp);
@@ -44,14 +44,14 @@ public class MenuDisplayFrame extends JFrame implements ActionListener {
         Object source = e.getSource();
         if(SelectionPanel.exitButton == source){
             
-            
             // store  the daily summary details to the file 
             ReceiptFileHandling file = new ReceiptFileHandling("./DailySummary.txt");
             String message;
             try{
                 // get the pizzas daily summary details
                 message = getPizzasDetails();
-                file.writeToFile(message,true);
+                System.out.println(message);
+                file.writeToFile(message,false);
                 
                 
                 //get the drinks daily summary details
@@ -70,7 +70,6 @@ public class MenuDisplayFrame extends JFrame implements ActionListener {
     public String getDrinksDetails(){
         int juiceDrinkQuantity = 0,coldDrinkQuantity=0;
         double juiceDrinkTotalAmount = 0,coldDrinkTotalAmount = 0;
-        String drinksSize,message = "";
         
         for(Drinks drink: drinks){
             if(drink.getUnitFlavour().equalsIgnoreCase("juice")){
@@ -130,5 +129,6 @@ public class MenuDisplayFrame extends JFrame implements ActionListener {
                 chickenAndMashAmount,chickenAndMayoQuantity,
                 chickenAndMayoAmount,beefQuantity,beefAmount,
                 (beefAmount+chickenAndMayoAmount+chickenAndMashAmount));
+        
     }
 }
