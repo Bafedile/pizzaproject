@@ -10,6 +10,6 @@ package za.ac.tut.pizzashop.items.extrasinterface;
  * @author benov
  */
 public interface ExtrasInterface {
-    public double cheeseExtrasAmount = 23.4;
-    public double baconExtrasAmount = 25.3;
+    public final double CHEESE_EXTRAS_AMOUNT = 23.4;
+    public final double BACON_EXTRAS_AMOUNT = 25.3;
 }
