@@ -20,6 +20,7 @@ public class Juice extends Drinks {
     
     public Juice(String unitFlavour,String unitSize,int unitQuantity){
         super(unitFlavour,unitSize,unitQuantity);
+       
     }
     @Override
     public double determineItemPrice(String unitSize) {
@@ -29,29 +30,26 @@ public class Juice extends Drinks {
             price = 10.23;
             
         }else if(unitSize.equalsIgnoreCase("medium")){
-            setUnitSize("1l");
+            setUnitSize("1.5l");
             price = 14.39;
         }else{
-            setUnitSize("1.5l");
+            setUnitSize("2l");
             price = 19.43;
         }
            
         return price;
     }
 
-    @Override
-    public double determineTotalAmount() {
-        return determineItemPrice(getUnitSize()) * getUnitQuantity();
-    }
     
-    
-    @Override
+     @Override
     public String toString(){
-        return String.format("Drink flavour: %s%n"
+        return String.format("--------------------------------%n"
+                + "Drink flavour: %s%n"
                 + "Drink size: %s%n"
-                + "Drink prize: R%.2f%n"
+                + "Drink price: R%.2f%n"
+                + "Drinks Total price: R%.2f%n"
                 + "Drink quantity: %d%n"
-                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineTotalAmount(),getUnitQuantity());
+                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineItemPrice(getUnitSize()),determineTotalAmount(),getUnitQuantity());
     }
     
 }
