@@ -200,7 +200,6 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
         nextButton.addActionListener(this);
         pizza_quantity_button.addActionListener(this);
         drink_quantity_button.addActionListener(this);
-        
         drinkSizesBox.addActionListener(this);
         PaymentSection.paymentButton.addActionListener(this);
         
@@ -308,7 +307,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
              totalPizzasAmount = ip.getTotalPizzasAmount(pizzas);
              totalDrinksAmount = ip.getTotalDrinksAmount(drinks);
              totalAmountDue = ip.getTotalAmountDue(totalPizzasAmount,totalDrinksAmount);
-             totalAmountDue += ((baconCount*baconExtrasAmount) + (cheeseCount*cheeseExtrasAmount));
+             totalAmountDue += ((baconCount*BACON_EXTRAS_AMOUNT) + (cheeseCount*CHEESE_EXTRAS_AMOUNT));
              System.out.println("total amount Due "+totalAmountDue);
             
              
@@ -347,14 +346,14 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
         
         if(extraBox2.isSelected()){
             baconCount = 1;
-            extrasText1 = String.format("Bacon Extras: %.2f%n",baconExtrasAmount*baconCount);
+            extrasText1 = String.format("Bacon Extras: %.2f%n",BACON_EXTRAS_AMOUNT*baconCount);
             System.out.println("bacon "+ totalAmountDue);
             extraBox2.disable();
             
          } 
         if(extraBox1.isSelected()){
             cheeseCount = 1;
-            extrasText2 = String.format("Cheese Extras: %.2f%n",cheeseExtrasAmount*cheeseCount);
+            extrasText2 = String.format("Cheese Extras: %.2f%n",CHEESE_EXTRAS_AMOUNT*cheeseCount);
             System.out.println("cheese "+ totalAmountDue);
             extraBox1.disable();
                 
