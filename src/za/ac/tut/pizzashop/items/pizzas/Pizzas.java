@@ -13,7 +13,7 @@ import za.ac.tut.pizzashop.itemsinterface.ItemsInterface;
  * @author benov
  */
 public class Pizzas extends Items  implements ItemsInterface{
-
+    double discount=determineItemPrice(getUnitSize())*getUnitQuantity()*0.12;
     // declare the default constructor 
     public Pizzas(){
         super();
@@ -31,8 +31,25 @@ public class Pizzas extends Items  implements ItemsInterface{
     }
 
     @Override
-    public double determineTotalAmount() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     public double determineTotalAmount() {
+        if(getUnitSize().equalsIgnoreCase("large") && getUnitQuantity()>=2){
+            return determineItemPrice(getUnitSize())*getUnitQuantity() - discount;
+        }else{
+            return determineItemPrice(getUnitSize()) * getUnitQuantity();
+        }
+        
+    }
+      @Override
+    public String toString(){
+        return String.format("---------------------------------%n"
+                + "Pizza flavour: %s%n"
+                + "Pizza size: %s%n"
+                + "Pizza price: R%.2f  each%n"
+                + "Pizza Discount : R%.2f%n"
+                + "Pizzas Total Price: R%.2f%n"
+                
+                + "Pizza quantity: %d%n"
+                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineItemPrice(getUnitSize()),discount,determineTotalAmount(),getUnitQuantity());
     }
     
 }
