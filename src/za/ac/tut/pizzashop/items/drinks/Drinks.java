@@ -19,8 +19,19 @@ public class Drinks extends Items  implements ItemsInterface{
         super();
     }
     
+    
+    
     public Drinks(String unitFlavour,String unitSize,int unitQuantity){
         super(unitFlavour,unitSize,unitQuantity);
+        if(unitSize == "440ml"){
+            unitSize = "small";
+        }else if(unitSize =="1.5l"){
+            unitSize = "medium";
+        }else if(unitSize =="2l"){
+            unitSize ="large";
+        }
+        
+        
     }
 
     @Override
@@ -30,8 +41,9 @@ public class Drinks extends Items  implements ItemsInterface{
 
     @Override
     public double determineTotalAmount() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return determineItemPrice(getUnitSize()) * getUnitQuantity();
     }
+    
 
    
         
