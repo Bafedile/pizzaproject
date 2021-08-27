@@ -30,12 +30,16 @@ public class ItemTrackPanel extends JPanel {
         
         // set label
         this.label.setBounds(90,0,200,30);
-        this.customerNo.setBounds(90,30,200,30);
-        this.customerNo.setForeground(Color.BLUE);
-        this.customerNo.setBorder(new LineBorder(Color.MAGENTA));
+        ItemTrackPanel.customerNo.setBounds(90,30,200,30);
+        ItemTrackPanel.customerNo.setForeground(Color.BLUE);
+        ItemTrackPanel.customerNo.setBorder(new LineBorder(Color.MAGENTA));
         // set the text area
 
         this.scrollableTextArea.setBounds(5,60,340,360);
+        ItemTrackPanel.text.setEditable(false);
+        ItemTrackPanel.text.setBackground(Color.GRAY);
+        ItemTrackPanel.text.setForeground(Color.white);
+        
         
         // add features
         this.add(label);
@@ -43,7 +47,5 @@ public class ItemTrackPanel extends JPanel {
         this.add(scrollableTextArea);
         this.setVisible(true);
     }
-    public void setText(String text){
-        this.text.setText(text);
-    }
+
 }
