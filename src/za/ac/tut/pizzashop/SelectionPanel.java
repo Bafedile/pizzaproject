@@ -36,6 +36,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
     String pizzaArray[] = {"None","Chicken And Mashroom","Chicken And Mayo","Beef And Cheese"};
     String drinkArray[] = {"None","Cold-drink","Juice"};
     String sizes[] = {"None","Small","Medium","Large"};
+    String drinkSizes [] = {"None","440ml","1l","2l"};
     
     static JComboBox pizzaBox;
     static JComboBox drinksBox;
@@ -58,7 +59,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
     
     
     JLabel extrasSelection = new JLabel("Choose extras");
-    JLabel pizza_quantity_label = new JLabel("Enter Drink Quantity Below");
+    JLabel pizza_quantity_label = new JLabel("Enter Pizza Quantity Below");
     JLabel drink_quantity_label = new JLabel("Enter Drink Quantity Below");
     
     JButton addButton = new JButton("Add");
@@ -138,8 +139,8 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
         this.drinkSizeSelection.setBounds(250,140,200,20);
         
         this.drinkSizesBox = new JComboBox();
-        for(int i=0;i<sizes.length;i++){
-            this.drinkSizesBox.addItem(sizes[i]);
+        for(int i=0;i<drinkSizes.length;i++){
+            this.drinkSizesBox.addItem(drinkSizes[i]);
         }
         this.drinkSizesBox.setBounds(250,160,200,30);
         
@@ -207,9 +208,10 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
 
     // Declare variables
     String pizzaFlavour,pizzaSize,drinkFlavour,drinkSize;
-    int pizzaQuantity,drinkQuantity;
+    int pizzaQuantity,drinkQuantity,baconCount=0,cheeseCount=0;
     double totalAmountDue, totalPizzasAmount,totalDrinksAmount;
-    String message;
+    String message,extrasText1,extrasText2;
+    
     ItemTrackPanel it = new ItemTrackPanel();
     int num = ItemTrackPanel.customerOrder++;
     
@@ -251,6 +253,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
             
         }
         if((addButton == source)||(doneButton == source)){
+            
             if(pizzaFlavour == null || pizzaFlavour.equalsIgnoreCase("none")){
                 
             }
@@ -269,7 +272,7 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
             }
             
             // Determine the drinks 
-            if(drinkFlavour == null) {
+            if(drinkFlavour == null || drinkFlavour.equalsIgnoreCase("none")) {
                 
             } else if(drinkFlavour.equalsIgnoreCase("Cold-drink")){
                 ColdDrink drink = new ColdDrink(drinkFlavour,drinkSize,drinkQuantity);
@@ -290,12 +293,23 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
             
             
             // Add the message to the cart 
-            ItemTrackPanel.text.setText(pizzaDetails+"\n"+drinksDetails);
+            if(extrasText1==null){
+                extrasText1 ="";
+            }
+            if(extrasText2 ==null){
+                extrasText2 = "";
+            }
+            String extrasText = String.format("---------------------------------%n"
+                    + "%s%n%s%n"
+                    + "----------------------------------%n",extrasText1,extrasText2);
+            ItemTrackPanel.text.setText(pizzaDetails+""+extrasText+""+drinksDetails);
             
             // Determine the total amounts due
              totalPizzasAmount = ip.getTotalPizzasAmount(pizzas);
              totalDrinksAmount = ip.getTotalDrinksAmount(drinks);
              totalAmountDue = ip.getTotalAmountDue(totalPizzasAmount,totalDrinksAmount);
+             totalAmountDue += ((baconCount*baconExtrasAmount) + (cheeseCount*cheeseExtrasAmount));
+             System.out.println("total amount Due "+totalAmountDue);
             
              
              
@@ -307,13 +321,14 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
             // restore to defaults 
             drinksBox.setSelectedIndex(0);
             
+            baconCount = 0;
+            cheeseCount = 0;
             drinkSizesBox.setSelectedIndex(0);
             sizesBox.setSelectedIndex(0);
             
             pizzaBox.setSelectedIndex(0);
             
-            extraBox1.isEnabled();
-            extraBox2.isEnabled();
+            
         }
         
         if(nextButton == source){
@@ -330,16 +345,20 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
             
         }
         
-        if(source == extraBox1){
-            totalAmountDue += cheeseExtrasAmount;
-            ItemTrackPanel.text.append(String.format("Cheese Extras : %.2f%n",cheeseExtrasAmount));
+        if(extraBox2.isSelected()){
+            baconCount = 1;
+            extrasText1 = String.format("Bacon Extras: %.2f%n",baconExtrasAmount*baconCount);
+            System.out.println("bacon "+ totalAmountDue);
+            extraBox2.disable();
+            
+         } 
+        if(extraBox1.isSelected()){
+            cheeseCount = 1;
+            extrasText2 = String.format("Cheese Extras: %.2f%n",cheeseExtrasAmount*cheeseCount);
+            System.out.println("cheese "+ totalAmountDue);
+            extraBox1.disable();
                 
             }
-        
-        if(source == extraBox2){
-            totalAmountDue += baconExtrasAmount;
-            ItemTrackPanel.text.append(String.format("Bacon Extras : %.2f%n",baconExtrasAmount));
-         }
 
         if(PaymentSection.paymentButton == source){
             String value = PaymentSection.payment.getText();
@@ -352,9 +371,14 @@ public class SelectionPanel extends JPanel implements ActionListener,ExtrasInter
  
         }
         
+        
+       
        
         
         
 
     }
+    
+    
+        
 }
