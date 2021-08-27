@@ -14,6 +14,7 @@ import za.ac.tut.pizzashop.itemsinterface.ItemsInterface;
  */
 public class Pizzas extends Items  implements ItemsInterface{
     double discount=determineItemPrice(getUnitSize())*getUnitQuantity()*0.12;
+    
     // declare the default constructor 
     public Pizzas(){
         super();
@@ -32,16 +33,18 @@ public class Pizzas extends Items  implements ItemsInterface{
 
     @Override
      public double determineTotalAmount() {
-        if(getUnitSize().equalsIgnoreCase("large") && getUnitQuantity()>=2){
-            return determineItemPrice(getUnitSize())*getUnitQuantity() - discount;
-        }else{
+       
             return determineItemPrice(getUnitSize()) * getUnitQuantity();
-        }
+        
         
     }
       @Override
     public String toString(){
-        return String.format("---------------------------------%n"
+        double totalAmountDue = 0;
+        if(getUnitSize().equalsIgnoreCase("large") && getUnitQuantity()>=2){
+            totalAmountDue = determineItemPrice(getUnitSize())*getUnitQuantity() - discount;
+            
+            return String.format("---------------------------------%n"
                 + "Pizza flavour: %s%n"
                 + "Pizza size: %s%n"
                 + "Pizza price: R%.2f  each%n"
@@ -49,7 +52,23 @@ public class Pizzas extends Items  implements ItemsInterface{
                 + "Pizzas Total Price: R%.2f%n"
                 
                 + "Pizza quantity: %d%n"
-                + "------------------------------------------%n",getUnitFlavour(),getUnitSize(),determineItemPrice(getUnitSize()),discount,determineTotalAmount(),getUnitQuantity());
+                + "------------------------------------------%n",getUnitFlavour(),
+                getUnitSize(),determineItemPrice(getUnitSize()),discount,
+                totalAmountDue,getUnitQuantity());
+        }else{
+            totalAmountDue = determineTotalAmount();
+            return String.format("---------------------------------%n"
+                + "Pizza flavour: %s%n"
+                + "Pizza size: %s%n"
+                + "Pizza price: R%.2f  each%n"
+                + "Pizzas Total Price: R%.2f%n"
+                
+                + "Pizza quantity: %d%n"
+                + "------------------------------------------%n",getUnitFlavour(),
+                getUnitSize(),determineItemPrice(getUnitSize()),
+                totalAmountDue,getUnitQuantity());
+        }
+        
     }
     
 }
